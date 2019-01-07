@@ -64,7 +64,7 @@ $ ./.install bootstrap osxprep brew macos gems
 6. Install [z](https://github.com/rupa/z) tool to quickly jump between projects
 
 
-# [Visual Studio Code](https://code.visualstudio.com/) zshell Integration 
+# Visual Studio Code zshell Integration 
 
 <img src="screenshots/vsc_zshell_integration.png" width="500">
 
