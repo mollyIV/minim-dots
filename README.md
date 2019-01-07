@@ -56,14 +56,15 @@ $ ./.install bootstrap osxprep brew macos gems
 <img src="screenshots/iTerm2_customisation.png" width="500">
 
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-2. Install [powerline-shell](https://github.com/b-ryan/powerline-shell)
+2. Install [powerline-shell](https://github.com/b-ryan/powerline-shell) to support path bars
 3. Create a powerline [Config File](https://github.com/b-ryan/powerline-shell#config-file) and remove `username` and `host`
 4. Set a Solarized Dark for the terminal colors
 4. Install and set [Meslo LG M Regular for Powerline.ttf](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf) font as you need that to support the directory characters for powerline
 5. Set Keys to Natural Text Editing
+6. Install [z](https://github.com/rupa/z) tool to quickly jump between projects
 
 
-# Visual Studio Code zshell Integration 
+# [Visual Studio Code](https://code.visualstudio.com/) zshell Integration 
 
 <img src="screenshots/vsc_zshell_integration.png" width="500">
 
