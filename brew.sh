@@ -35,17 +35,6 @@ brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
-# Install Bash 4.
-brew install bash
-brew tap homebrew/versions
-brew install bash-completion2
-# We installed the new shell, now we have to activate it
-echo "Adding the newly installed shell to the list of allowed shells"
-# Prompts for password
-sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
-# Change to the new shell, prompts for password
-chsh -s /usr/local/bin/bash
-
 # Install Python
 brew install python
 brew install python3
@@ -70,10 +59,11 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Apps
+brew cask install iterm2
 brew cask install google-chrome
 brew cask install java
 brew cask install slack
-brew cask install atom
+brew cask install visual-studio-code
 brew cask install sourcetree
 brew cask install tidal
 brew install bear
