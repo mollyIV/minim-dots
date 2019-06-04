@@ -13,7 +13,8 @@ function doIt() {
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "screenshots" \
 		-avh --no-perms . ~;
-	source ~/.zshrc
+	source ~/.zshrc;
+	source ~/.hyper.js;
 }
 
 read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;

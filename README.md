@@ -6,7 +6,7 @@ The goal of `minim-dots` is to simplify development setup on new machine which c
 
 You are more than welcome to fork this repository and adjust the apps, tools and settings to your needs. 
 
-Feel free to give your feedback, let's make this project better together! :muscles:
+Feel free to give your feedback, let's make this project better together!
 
 # Usage
 ```
@@ -41,38 +41,65 @@ $ ./.install bootstrap osxprep brew macos gems
 * Cocoapods
 * Bundler
 * Fastlane
-* iTerm2
-* Google chrome
+* Hyper
+* Firefox
+* Brave
 * Java
 * Slack
 * Visual Studio Code
 * Sourcetree
 * Tidal
+* Spotify
 * Bear
 
 
-# iTerm2 Customisation 
+# Hyper
 
-<img src="screenshots/iTerm2_customisation.png" width="500">
+<img src="screenshots/hyper.png" width="500">
 
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-2. Install [powerline-shell](https://github.com/b-ryan/powerline-shell) to support path bars
-3. Create a powerline [Config File](https://github.com/b-ryan/powerline-shell#config-file) and remove `username` and `host`
-4. Set a Solarized Dark for the terminal colors
-4. Install and set [Meslo LG M Regular for Powerline.ttf](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf) font as you need that to support the directory characters for powerline
-5. Set Keys to Natural Text Editing
+2. Install [powerlevel9k](https://github.com/bhilburn/powerlevel9k)
+3. Install [nerd-fonts](https://github.com/ryanoasis/nerd-fonts)
+4. Install [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+5. Install [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 6. Install [z](https://github.com/rupa/z) tool to quickly jump between projects
 
 
-# Visual Studio Code zshell Integration 
-
-<img src="screenshots/vsc_zshell_integration.png" width="500">
+# Visual Studio Code
 
 1. Modify user's settings
 
 ``` User Settings.json
-"terminal.integrated.shell.osx": "/bin/zsh",
-"terminal.integrated.fontFamily": "Meslo LG M for Powerline"
+{
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontFamily": "MesloLGL Nerd Font Mono",
+    "terminal.integrated.rendererType": "dom",
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "workbench.colorTheme": "Andromeda Colorizer",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editor.background": "#1e1e1e",
+        "titleBar.activeBackground": "#1e1e1e",
+        "editorGroup.dropBackground": "#1e1e1e",
+        "editorGroupHeader.tabsBackground": "#1e1e1e",
+        "tab.border": "#1e1e1e",
+        "tab.inactiveBackground": "#1e1e1e",
+        "sideBar.background": "#1e1e1e",
+        "activityBar.background": "#1e1e1e",
+        "editor.foreground": "#ffffff",
+
+        "statusBar.background": "#1e1e1e",
+        "statusBar.debuggingBackground": "#FC644D",
+        "statusBar.noFolderBackground": "#1e1e1e",
+        "statusBarItem.activeBackground": "#00e8c5cc",
+        "statusBarItem.hoverBackground": "#07d4b5b0",
+        "statusBarItem.prominentBackground": "#07d4b5b0",
+        "statusBarItem.prominentHoverBackground": "#00e8c5cc",
+    },
+    "window.zoomLevel": 1,
+}
 ```
 
 2. `code` alias support
@@ -85,6 +112,7 @@ This repository builds on amazing work from:
 * [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
 * [Donne Martin](https://github.com/donnemartin/dev-setup)
 * [Felix Krause](https://github.com/KrauseFx/what-terminal-is-felix-using)
+* [Carl Vuorinen](https://github.com/cvuorinen/dotfiles)
 * [Maciek Grzybowski](https://github.com/ncreated/dotfiles)
 
 Thank you so much for your effort guys :pray:

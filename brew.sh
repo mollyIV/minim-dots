@@ -59,13 +59,15 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Apps
-brew cask install iterm2
-brew cask install google-chrome
+brew cask install hyper
+brew cask install firefox
+brew cask install brave-browser
 brew cask install java
 brew cask install slack
 brew cask install visual-studio-code
 brew cask install sourcetree
 brew cask install tidal
+brew cask install spotify
 brew install bear
 
 # Development tools
