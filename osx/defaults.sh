@@ -76,9 +76,6 @@ defaults write com.apple.screensaver askForPasswordDelay -int 5
 # Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
-# Set login window text
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText -string "I'm sorry Dave, I'm afraid I can't do that"
-
 
 #
 # Dock
