@@ -1,0 +1,90 @@
+# [user]
+#   name = TODO
+#   email = TODO
+[core]
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  whitespace = trailing-space,space-before-tab
+  pager = pager
+[init]
+  defaultBranch = main
+[push]
+  default = matching
+  followTags = true
+[diff]
+  renames = copies
+  mnemonicprefix = true
+  algorithm = patience
+  indentHeuristic = true
+  colorMoved = zebra
+[merge]
+  log = true
+  stat = true
+[help]
+  autocorrect = 1
+[alias]
+  a           = add
+  adeleted    = !sh -c 'git ls-files `git rev-parse --show-toplevel` --deleted -z | xargs -0 git rm -r'
+  ap          = add -p
+  auntracked  = !sh -c 'git ls-files `git rev-parse --show-toplevel` --others --exclude-standard -z | xargs -0 git add'
+  b           = branch
+  ba          = branch -a
+  branches    = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  c           = clone --recursive
+  cbm         = !sh -c 'git cb $1 mine' -
+  co          = checkout
+  co-pr       = !sh -c 'git fetch origin pull/$1/head:pr/$1 && git checkout pr/$1' -
+  com         = commit --verbose
+  coma        = commit --verbose --amend --no-edit
+  comf        = commit --verbose --fixup=HEAD
+  cop         = !sh -c 'git branch | cut -c 3- | fzy --query=$1 | xargs git checkout' -
+  copr        = !sh -c 'git branch -r | cut -c 3- | grep -v HEAD | cut -d/ -f2- | fzy --query=$1 | xargs git checkout' -
+  ctags       = !.git/hooks/ctags
+  d           = diff
+  dc          = diff --cached
+  dm          = !sh -c 'git diff $@ $(git merge-base $(git main-branch) $(git name-rev --name-only HEAD))' -
+  dstash      = !sh -c 'git stash show -p stash@{${1-0}}' -
+  g           = !exec git
+  git         = !exec git
+  l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset %ar'
+  last        = diff HEAD^ HEAD
+  last-msg    = !git --no-pager log --format=format:%B -1
+  last-sha    = !git --no-pager log --format=format:%H -1
+  pul         = pull
+  punch       = push --force-with-lease
+  r           = reflog -20
+  ra          = rebase --abort
+  rc          = rebase --continue
+  roma        = !sh -c 'git rebase origin/$(git main-branch)'
+  romi        = !sh -c 'git rebase origin/$(git main-branch) -i'
+  rv          = remote -v
+  s           = status -sb
+  sub         = submodule update --init --recursive
+  undo        = reset --soft HEAD^
+  wtc         = !sh -c 'git commit $@ -m \""`curl -s http://whatthecommit.com/index.txt`"\"' -
+[fetch]
+  prune = true
+[stash]
+  showPatch = true
+[commit]
+  verbose = true
+[diff "plist"]
+  textconv = plutil -convert xml1 -o -
+[diff "provision"]
+  textconv = normalize-profile --ignore-invalid
+[diff "exif"]
+  textconv = exiftool
+[diff "zip"]
+  textconv = textconv-zip
+  cachetextconv = true
+[status]
+  showUntrackedFiles = all
+[log]
+  follow = true
+[grep]
+  column = true
+  lineNumber = true
+[branch "main"]
+  pushRemote = NOPE
+[branch "master"]
+  pushRemote = NOPE

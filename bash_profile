@@ -1,0 +1,1 @@
+[[ $- == *i* ]] && source "$HOME/.bashrc"
