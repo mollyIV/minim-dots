@@ -19,8 +19,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General Settings
 #
 
-# Default sidebar icon size to small
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+# Default sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Ask to keep changes on close
 defaults write NSGlobalDomain NSCloseAlwaysConfirmsChanges -int 1
